@@ -1,5 +1,5 @@
-import Expenses from './components/Expenses';
-
+import Expenses from './components/Expense/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 function App() {
   const expenses = [
     {
@@ -22,9 +22,10 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+    //JSX code internally calls a method --> React.createElement('div',{},React.createElement('h2',{},"This is visible!"),...)
   return (
     <div>
-      <h1>This is visible!</h1>
+      <NewExpense />
       <Expenses item={expenses} />
     </div>
   );
